@@ -1,12 +1,12 @@
-import { Form, Field, FormError } from '../lib/index';
+import { Form, Field } from '../lib/index';
 import assert from 'assert';
 
 describe('some describe', () => {
 	describe('with errors', () => {
 		it('required field not provided', () => {
 			const fieldName = 'someRequiredField';
-			const form = new Form([
-				new Field(fieldName).required,
+			const form = Form([
+				Field(fieldName).required,
 			]);
 			try {
 				form.validate({});
@@ -21,8 +21,8 @@ describe('some describe', () => {
 		it('required field provided', () => {
 			const fieldName = 'someRequiredField';
 			const fieldValue = 123;
-			const form = new Form([
-				new Field(fieldName).required,
+			const form = Form([
+				Field(fieldName).required,
 			]);
 			assert.deepStrictEqual(form.validate({ [fieldName]: fieldValue }), { [fieldName]: fieldValue });
 		});
