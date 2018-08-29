@@ -1,7 +1,34 @@
 import { Form, Field } from '../lib/index';
 import assert from 'assert';
 
-describe('some describe', () => {
+describe('empty form', () => {
+	it('empty params', () => {
+		assert.deepStrictEqual(Form().validate({}), {});
+	});
+	it('non empty params', () => {
+		assert.deepStrictEqual(Form().validate({ a: 1, b: 'c', d: new Date() }), {});
+	});
+});
+
+describe('without requirements', () => {
+	it('empty params', () => {
+		const form = Form(
+			Field('someField'),
+			Field('someAnotherOneField'),
+			Field('lastField'),
+		);
+		assert.deepStrictEqual(form.validate({}), {});
+	});
+	it('with several params', () => {
+		const fields = [1, 2, 3].map(i => `field_${i}`);
+		const form = Form(
+			Field('someField'),
+
+		)
+	})
+});
+
+describe('', () => {
 	describe('with errors', () => {
 		it('required field not provided', () => {
 			const fieldName = 'someRequiredField';
