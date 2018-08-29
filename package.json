@@ -1,0 +1,26 @@
+{
+	"name": "handy-forms",
+	"version": "0.1.0",
+	"description": "more convenient and versatile forms, in comparison with express-forms",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha --compilers js:babel-core/register"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/nicklatkovich/handy-forms.git"
+	},
+	"author": "NickLatkovich",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nicklatkovich/handy-forms/issues"
+	},
+	"homepage": "https://github.com/nicklatkovich/handy-forms#readme",
+	"devDependencies": {
+		"assert": "^1.4.1",
+		"babel-cli": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-stage-0": "^6.24.1",
+		"mocha": "^5.2.0"
+	}
+}
