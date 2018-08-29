@@ -4,7 +4,7 @@
 	"description": "more convenient and versatile forms, in comparison with express-forms",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha --compilers js:babel-core/register"
+		"test": "nyc --require babel-core/register mocha"
 	},
 	"repository": {
 		"type": "git",
@@ -21,6 +21,7 @@
 		"babel-cli": "^6.26.0",
 		"babel-preset-es2015": "^6.24.1",
 		"babel-preset-stage-0": "^6.24.1",
-		"mocha": "^5.2.0"
+		"mocha": "^5.2.0",
+		"nyc": "^13.0.1"
 	}
 }
